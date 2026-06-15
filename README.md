@@ -1,106 +1,291 @@
-# Marketing ROI Optimization for Higher Education
+# 🎓 Marketing ROI Optimization for Higher Education
 
-## Executive Summary
+## Overview
 
-This Power BI project analyzes marketing performance, student acquisition, and enrollment outcomes across academic programs.
+This Power BI project analyzes the effectiveness of marketing investments across academic programs and evaluates their impact on student admissions.
 
-The dashboard enables leadership teams to evaluate:
+The solution combines admissions, lead generation, and marketing spend data to help decision-makers identify high-performing programs, optimize budget allocation, and improve enrollment outcomes.
 
-- Marketing ROI
-- Cost Per Lead (CPL)
-- Cost Per Admission (CAC)
-- Lead-to-Admission Conversion
-- Program Growth Trends
-- Budget Optimization Opportunities
+The dashboard provides insights into:
 
----
-
-## Business Problem
-
-Higher education institutions invest significant budgets in student acquisition and marketing campaigns.
-
-The objective of this project was to identify:
-
-- Which programs generate the highest admissions
-- Which programs deliver the strongest marketing ROI
-- Where marketing spend should be optimized
-- Which programs demonstrate the highest conversion efficiency
-- Growth opportunities across academic portfolios
+* Admission trends
+* Marketing efficiency
+* Lead-to-admission conversion performance
+* Program-level growth opportunities
+* Cost optimization opportunities
+* Strategic enrollment planning
 
 ---
 
-## Tools & Technologies
+# Business Objective
 
-- Power BI
-- DAX
-- Power Query
-- Data Modeling
-- Star Schema Design
-- Business Intelligence
+Higher education institutions invest significant marketing budgets across multiple programs. However, determining which programs generate the highest returns can be challenging.
+
+This project was developed to answer key business questions:
+
+* Which programs generate the highest admissions?
+* Which programs deliver the best return on marketing investment?
+* How efficiently are leads converted into admissions?
+* Which programs require budget optimization?
+* Where should future marketing investments be focused?
 
 ---
 
-## Data Model
+# Dataset Overview
 
-The solution follows a star schema design with a central fact table and supporting dimensions.
+The dataset contains information related to:
+
+* Academic Programs
+* Program Groups
+* Marketing Drives
+* Academic Years
+* Lead Volumes
+* Admissions
+* Marketing Spend
+
+The model enables comparative analysis between 2024 and 2025 performance.
+
+---
+
+# Data Model
+
+The solution follows a Star Schema architecture to improve performance and maintain scalability.
+
+### Fact Table
+
+* Fact_ProgramAnalysis
+
+### Dimension Tables
+
+* Dim_Program
+* Dim_Group
+* Dim_Drive
+* Dim_AcademicYear
+
+### Model Highlights
+
+* Star Schema Design
+* One-to-Many Relationships
+* Optimized Query Performance
+* Scalable Reporting Structure
+* Dynamic Filtering Support
 
 ![Data Model](Documentation/Data_Model.png)
 
 ---
 
-## Key KPIs
+# Dashboard Pages
 
-- Total Admissions
-- Total Leads
-- Total Marketing Spend
-- Cost Per Lead (CPL)
-- Cost Per Admission (CAC)
-- Conversion Rate %
+## 1. Executive Dashboard
 
----
+Provides a consolidated view of overall marketing and admissions performance.
 
-## Dashboard Pages
+### Key Metrics
 
-### Executive Dashboard
+* Total Admissions
+* Total Leads
+* Total Marketing Spend
+* Cost Per Admission (CAC)
+* Cost Per Lead (CPL)
+* Conversion Rate
 
-High-level overview of admissions, leads, spend, CPL, CAC, and conversion performance.
+### Business Value
 
-### Year-over-Year Analysis
+Enables leadership teams to quickly assess enrollment performance and marketing effectiveness.
 
-Comparison of admissions, leads, spend, and performance metrics between 2024 and 2025.
-
-### Program Analysis
-
-Program-level performance evaluation including admissions growth, lead generation, conversion trends, and acquisition costs.
-
-### Marketing Efficiency Analysis
-
-Identification of high-potential programs and budget optimization opportunities using ROI-based analysis.
-
-### Lead Conversion Funnel Analysis
-
-Evaluation of lead-to-admission conversion efficiency and enrollment funnel performance.
+![Executive Dashboard](Dashboard_Screenshots/Executive_Dashboard.png)
 
 ---
 
-## Skills Demonstrated
+## 2. Year-over-Year Performance Analysis
 
-- Data Modeling
-- Star Schema Design
-- DAX Development
-- KPI Design
-- Executive Reporting
-- Marketing Analytics
-- Conversion Funnel Analysis
-- Business Intelligence
-- Data Storytelling
+Compares 2024 and 2025 performance across programs and groups.
+
+### Analysis Included
+
+* Admissions Growth
+* Lead Growth
+* Spend Growth
+* Group-Level Performance Comparison
+
+### Business Value
+
+Identifies growth trends and highlights areas requiring intervention.
+
+![Year-over-Year Analysis](Dashboard_Screenshots/YoY_Trends.png)
 
 ---
 
-## Key Insights
+## 3. Program Performance Analysis
 
-- M.Tech AI emerged as one of the strongest-performing programs.
-- Marketing efficiency varies significantly across programs.
-- Several programs present opportunities for budget optimization.
-- Conversion performance is a major driver of admissions growth.
-- Program-level strategy is more effective than uniform budget allocation.
+Provides detailed program-level performance insights.
+
+### Analysis Included
+
+* Admissions Growth %
+* Lead Growth %
+* Conversion Rate Changes
+* Cost Per Lead Changes
+* Cost Per Admission Changes
+
+### Business Value
+
+Helps identify top-performing and underperforming academic programs.
+
+![Program Analysis](Dashboard_Screenshots/Program_Analysis.png)
+
+---
+
+## 4. Marketing Efficiency Analysis
+
+Evaluates the relationship between marketing investment and admissions outcomes.
+
+### Analysis Included
+
+* Cost Per Admission vs Admissions Matrix
+* High Potential Programs
+* Growth Opportunity Identification
+* Budget Optimization Opportunities
+
+### Business Value
+
+Supports data-driven marketing budget allocation.
+
+![Marketing Efficiency Analysis](Dashboard_Screenshots/Marketing_Efficiency.png)
+
+---
+
+## 5. Lead-to-Admission Conversion Analysis
+
+Examines the effectiveness of the enrollment funnel.
+
+### Analysis Included
+
+* Lead-to-Admission Funnel
+* Conversion Rate by Program
+* Lead Volume vs Conversion Efficiency
+* Funnel Bottleneck Identification
+
+### Business Value
+
+Highlights opportunities to improve enrollment conversion performance.
+
+![Lead Conversion Analysis](Dashboard_Screenshots/Lead_Conversion_Funnel.png)
+
+---
+
+# Key KPIs
+
+### Enrollment Metrics
+
+* Total Admissions
+* Admissions Growth %
+* Program-wise Admissions
+
+### Marketing Metrics
+
+* Marketing Spend
+* Cost Per Lead (CPL)
+* Cost Per Admission (CAC)
+
+### Conversion Metrics
+
+* Lead Volume
+* Conversion Rate %
+* Conversion Growth %
+
+---
+
+# Key Insights
+
+### Admissions Performance
+
+* Significant growth observed across multiple programs in 2025.
+* M.Tech AI-related programs emerged as major contributors to admissions growth.
+* Program performance varies significantly across academic groups.
+
+### Marketing Efficiency
+
+* Higher spend does not always translate into higher admissions.
+* Several programs demonstrate strong performance with comparatively lower acquisition costs.
+* Budget optimization opportunities exist across multiple portfolios.
+
+### Conversion Performance
+
+* Overall lead-to-admission conversion rate stands at approximately 4.31%.
+* Certain programs achieve substantially higher conversion rates than the portfolio average.
+* Improving conversion efficiency presents a major opportunity for enrollment growth.
+
+---
+
+# Skills Demonstrated
+
+### Power BI
+
+* Interactive Dashboard Development
+* KPI Design
+* Data Visualization
+* Performance Optimization
+
+### Data Modeling
+
+* Star Schema Design
+* Relationship Management
+* Dimensional Modeling
+
+### DAX
+
+* Time Intelligence
+* Growth Calculations
+* Conversion Metrics
+* Variance Analysis
+
+### Business Analytics
+
+* Marketing Analytics
+* Enrollment Analytics
+* Funnel Analysis
+* Strategic Decision Support
+
+---
+
+# Tools & Technologies
+
+* Power BI Desktop
+* DAX
+* Power Query
+* Data Modeling
+* Business Intelligence
+* Data Visualization
+
+---
+
+# Repository Structure
+
+```text
+Marketing-ROI-Optimization-for-Higher-Education
+│
+├── README.md
+│
+├── Documentation
+│   └── Data_Model.png
+│
+└── Dashboard_Screenshots
+    ├── Executive_Dashboard.png
+    ├── YoY_Trends.png
+    ├── Program_Analysis.png
+    ├── Marketing_Efficiency.png
+    └── Lead_Conversion_Funnel.png
+```
+
+---
+
+# Author
+
+### Gourav Dutta
+
+Data Analyst | Power BI Developer | Business Intelligence Enthusiast
+
+GitHub: https://github.com/gouravinsights
+
+LinkedIn: Add Your LinkedIn Profile Here
