@@ -59,15 +59,6 @@ The solution follows a Star Schema design with a centralized fact table and supp
 ![Data Model](Documentation/Data_Model.png)
 
 ---
-
-## 🏗 Solution Architecture
-
-The solution follows a structured Business Intelligence workflow from raw data ingestion to executive-level reporting.
-
-![Architecture](Documentation/Project_Architecture.png)
-
----
-
 ## 📈 Key KPIs
 
 ### Marketing Metrics
