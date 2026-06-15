@@ -6,11 +6,11 @@ This Power BI solution analyzes marketing effectiveness across academic programs
 
 The dashboard helps decision-makers:
 
-- Identify high-performing programs
-- Measure marketing ROI
-- Analyze lead-to-admission conversion efficiency
-- Optimize budget allocation
-- Improve enrollment outcomes
+* Identify high-performing programs
+* Measure marketing ROI
+* Analyze lead-to-admission conversion efficiency
+* Optimize budget allocation
+* Improve enrollment outcomes
 
 ---
 
@@ -20,50 +20,144 @@ Educational institutions invest significant budgets in marketing campaigns, but 
 
 This project provides a data-driven framework to evaluate:
 
-- Marketing Spend
-- Leads Generated
-- Admissions Achieved
-- Cost Per Lead (CPL)
-- Cost Per Admission (CAC)
-- Conversion Efficiency
+* Marketing Spend
+* Leads Generated
+* Admissions Achieved
+* Cost Per Lead (CPL)
+* Cost Per Acquisition (CPA)
+* Conversion Efficiency
+* Program Performance Trends
 
 ---
 
 ## 🛠 Tools & Technologies
 
-- Power BI
-- DAX
-- Power Query
-- Data Modeling
-- Star Schema Design
-- Business Intelligence
+* Power BI
+* DAX
+* Power Query
+* Data Modeling
+* Star Schema Design
+* Business Intelligence
 
 ---
 
 ## 📊 Data Model
 
-The solution follows a star schema design with a central fact table and supporting dimensions.
+The solution follows a Star Schema design with a centralized fact table and supporting dimension tables.
+
+### Fact Table
+
+* Fact_ProgramAnalysis
+
+### Dimension Tables
+
+* Dim_Program
+* Dim_Group
+* Dim_Drive
+* Dim_AcademicYear
 
 ![Data Model](Documentation/Data_Model.png)
+
+---
+
+## 🏗 Solution Architecture
+
+The solution follows a structured Business Intelligence workflow from raw data ingestion to executive-level reporting.
+
+![Architecture](Documentation/Project_Architecture.png)
 
 ---
 
 ## 📈 Key KPIs
 
 ### Marketing Metrics
-- Total Spend
-- Cost Per Lead (CPL)
-- Cost Per Admission (CAC)
+
+* Total Spend
+* Cost Per Lead (CPL)
+* Cost Per Acquisition (CPA)
 
 ### Admissions Metrics
-- Total Admissions
-- Admission Growth %
-- Conversion Rate %
+
+* Total Admissions
+* Admissions Growth %
+* Conversion Rate %
 
 ### Lead Metrics
-- Total Leads
-- Lead Growth %
-- Lead-to-Admission Conversion %
+
+* Total Leads
+* Lead Growth %
+* Lead-to-Admission Conversion %
+
+---
+
+# Sample DAX Measures
+
+The dashboard leverages DAX measures to calculate business KPIs, evaluate marketing efficiency, and identify program performance trends.
+
+### Total Admissions
+
+```DAX
+Total Admissions =
+SUM(Fact_ProgramAnalysis[B2C Admissions])
+```
+
+### Conversion Rate
+
+```DAX
+Conversion % =
+DIVIDE(
+    [Total Admissions],
+    [Total Leads],
+    0
+)
+```
+
+### Cost Per Lead (CPL)
+
+```DAX
+Cost Per Lead =
+DIVIDE(
+    [Total Spend],
+    [Total Leads],
+    0
+)
+```
+
+### Cost Per Acquisition (CPA)
+
+```DAX
+Cost Per Acquisition =
+DIVIDE(
+    SUM(Fact_ProgramAnalysis[Spends]),
+    SUM(Fact_ProgramAnalysis[B2C Admissions]),
+    0
+)
+```
+
+### Admissions Growth %
+
+```DAX
+Admissions Growth % =
+DIVIDE(
+    [2025 Admissions] - [2024 Admissions],
+    [2024 Admissions],
+    0
+)
+```
+
+### Performance Classification
+
+```DAX
+Performance Gap =
+SWITCH(
+    TRUE(),
+    [Admissions Change %] >= 0.50, "Exceeding Market Expectations",
+    [Admissions Change %] >= 0.10, "Strong Performance",
+    [Admissions Change %] > -0.10, "Stable Performance",
+    [Admissions Change %] > -0.40, "Moderate Underperformance",
+    "Significant Underperformance"
+)
+```
 
 ---
 
@@ -111,20 +205,52 @@ Measures lead-to-admission conversion effectiveness across programs.
 
 ## 📌 Key Insights
 
-- M.Tech AI & ML generated the highest admissions volume.
-- Several B.Tech programs delivered strong admissions at lower acquisition costs.
-- Marketing spend alone does not guarantee admissions success.
-- Conversion efficiency is a major driver of enrollment performance.
-- Certain programs present strong growth opportunities with optimized spending.
+* M.Tech AI & ML generated the highest admissions volume.
+* Several B.Tech programs delivered strong admissions at lower acquisition costs.
+* Marketing spend alone does not guarantee admissions success.
+* Conversion efficiency is a major driver of enrollment performance.
+* Certain programs present strong growth opportunities with optimized spending.
+
+---
+
+# Business Recommendations
+
+## Optimize Marketing Spend
+
+Programs with high acquisition costs and lower admission outcomes should undergo campaign review and budget optimization to improve ROI.
+
+## Scale High-Performing Programs
+
+Programs demonstrating strong admissions growth and efficient acquisition costs should receive increased marketing investment.
+
+## Improve Conversion Efficiency
+
+Programs generating high lead volumes but low admission conversions should focus on lead nurturing strategies and admissions counseling improvements.
+
+## Introduce Performance-Based Budgeting
+
+Future marketing budgets should be allocated using program performance metrics rather than equal distribution across all programs.
+
+## Continuous KPI Monitoring
+
+Monitor admissions, conversion rates, CPL, and CPA regularly to support proactive decision-making.
+
+### Expected Business Impact
+
+* Reduced student acquisition costs
+* Improved marketing ROI
+* Higher lead-to-admission conversion rates
+* Better budget allocation
+* Increased admissions growth across programs
 
 ---
 
 ## 📂 Repository Structure
 
-```
+```text
 Assets/
 │
-├── Program Analysis 2024-2025.pbix
+├── Marketing_ROI_Optimization.pbix
 
 Dashboard_Screenshots/
 │
@@ -136,7 +262,8 @@ Dashboard_Screenshots/
 
 Documentation/
 │
-└── Data_Model.png
+├── Data_Model.png
+└── Project_Architecture.png
 ```
 
 ---
