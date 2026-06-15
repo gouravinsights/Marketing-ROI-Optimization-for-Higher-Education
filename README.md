@@ -1,15 +1,15 @@
-# 🎓 Marketing ROI Optimization for Higher Education
+# 🎓 Marketing ROI Optimisation for Higher Education
 
 ## 📌 Project Overview
 
-This Power BI solution analyzes marketing effectiveness across academic programs and evaluates how marketing investments influence student admissions.
+This Power BI solution analyses marketing effectiveness across academic programs and evaluates how marketing investments influence student admissions.
 
 The dashboard helps decision-makers:
 
 * Identify high-performing programs
 * Measure marketing ROI
-* Analyze lead-to-admission conversion efficiency
-* Optimize budget allocation
+* Analyse lead-to-admission conversion efficiency
+* Optimise budget allocation
 * Improve enrollment outcomes
 
 ---
@@ -200,15 +200,15 @@ Measures lead-to-admission conversion effectiveness across programs.
 * Several B.Tech programs delivered strong admissions at lower acquisition costs.
 * Marketing spend alone does not guarantee admissions success.
 * Conversion efficiency is a major driver of enrollment performance.
-* Certain programs present strong growth opportunities with optimized spending.
+* Certain programs present strong growth opportunities with optimised spending.
 
 ---
 
 # Business Recommendations
 
-## Optimize Marketing Spend
+## Optimise Marketing Spend
 
-Programs with high acquisition costs and lower admission outcomes should undergo campaign review and budget optimization to improve ROI.
+Programs with high acquisition costs and lower admission outcomes should undergo campaign review and budget optimisation to improve ROI.
 
 ## Scale High-Performing Programs
 
